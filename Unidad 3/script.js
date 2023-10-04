@@ -106,3 +106,47 @@ if(notaFinal >= 7){
     console.log(nomEstudiant + ", necesites millorar la nota per aprovar el modul.");
 }
 
+//Ejercicio Largo
+let any2010Juny = 25.8;
+let any2010Juliol = 28.6;
+let any2010Agost = 30.1;
+let any2015Juny = 26.5;
+let any2015Juliol = 29.3;
+let any2015Agost = 30.8;
+let any2020Juny = 27.2;
+let any2020Juliol = 29.9;
+let any2020Agost = 31.5;
+
+let mitjanaAny2010 = (any2010Juny+any2010Juliol+any2010Agost)/3;
+let mitjanaAny2015 = (any2015Juny+any2015Juliol+any2015Agost)/3;
+let mitjanaAny2020 = (any2020Juny+any2020Juliol+any2020Agost)/3;
+
+let mitjanaAny2010Farenhiet = (mitjanaAny2010*9/5)+32;
+let mitjanaAny2015Farenhiet = (mitjanaAny2015*9/5)+32;
+let mitjanaAny2020Farenhiet = (mitjanaAny2020*9/5)+32;
+
+let mitjanaAny2010Kelvin = (mitjanaAny2010+273.5);
+let mitjanaAny2015Kelvin = (mitjanaAny2015+273.5);
+let mitjanaAny2020Kelvin = (mitjanaAny2020+273.5);
+
+superatAny2010 = mitjanaAny2010 > 30 ? true : false;
+superatAny2015 = mitjanaAny2015 > 30 ? true : false;
+superatAny2020 = mitjanaAny2020 > 30 ? true : false;
+
+for(i=10;i<=20;i=i+5){
+
+    switch (i) {
+        case 10:
+            console.log(mitjanaAny20+i);
+            console.log(mitjanaAny20+i);
+            console.log(mitjanaAny20+i);
+                
+            break;
+    
+        default:
+            break;
+    }
+
+    
+
+}

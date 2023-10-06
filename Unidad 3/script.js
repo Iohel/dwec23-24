@@ -137,11 +137,35 @@ for(i=10;i<=20;i=i+5){
 
     switch (i) {
         case 10:
-            console.log(mitjanaAny20+i);
-            console.log(mitjanaAny20+i);
-            console.log(mitjanaAny20+i);
-                
+            console.log(mitjanaAny2010);
+            console.log(mitjanaAny2010Farenhiet);
+            console.log(mitjanaAny2010Kelvin);
+            if(superatAny2010){
+                console.log("Mitjana supera el 30 graus celcius.");
+            }else{
+                console.log("Mitjana no supera el 30 graus celcius.");
+            }
             break;
+            case 15:
+                console.log(mitjanaAny2015);
+                console.log(mitjanaAny2015Farenhiet);
+                console.log(mitjanaAny2015Kelvin);
+                if(superatAny2015){
+                    console.log("Mitjana supera el 30 graus celcius.");
+                }else{
+                    console.log("Mitjana no supera el 30 graus celcius.");
+                }
+                break;
+            case 20:
+                console.log(mitjanaAny2020);
+                console.log(mitjanaAny2020Farenhiet);
+                console.log(mitjanaAny2020Kelvin);
+                if(superatAny2020){
+                    console.log("Mitjana supera el 30 graus celcius.");
+                }else{
+                    console.log("Mitjana no supera el 30 graus celcius.");
+                }
+                break;
     
         default:
             break;

@@ -107,6 +107,7 @@ if(notaFinal >= 7){
 }
 
 //Ejercicio Largo
+//Data provided
 let any2010Juny = 25.8;
 let any2010Juliol = 28.6;
 let any2010Agost = 30.1;
@@ -117,22 +118,27 @@ let any2020Juny = 27.2;
 let any2020Juliol = 29.9;
 let any2020Agost = 31.5;
 
+//Calculations of average
 let mitjanaAny2010 = (any2010Juny+any2010Juliol+any2010Agost)/3;
 let mitjanaAny2015 = (any2015Juny+any2015Juliol+any2015Agost)/3;
 let mitjanaAny2020 = (any2020Juny+any2020Juliol+any2020Agost)/3;
 
+//Convert to Farenheit
 let mitjanaAny2010Farenhiet = (mitjanaAny2010*9/5)+32;
 let mitjanaAny2015Farenhiet = (mitjanaAny2015*9/5)+32;
 let mitjanaAny2020Farenhiet = (mitjanaAny2020*9/5)+32;
 
+//Convert to Kelvin
 let mitjanaAny2010Kelvin = (mitjanaAny2010+273.5);
 let mitjanaAny2015Kelvin = (mitjanaAny2015+273.5);
 let mitjanaAny2020Kelvin = (mitjanaAny2020+273.5);
 
+//Boolean to check if the average temperature is above 30.
 superatAny2010 = mitjanaAny2010 > 30 ? true : false;
 superatAny2015 = mitjanaAny2015 > 30 ? true : false;
 superatAny2020 = mitjanaAny2020 > 30 ? true : false;
 
+//Switch per controlar  s'output de cada any.
 for(i=10;i<=20;i=i+5){
 
     switch (i) {

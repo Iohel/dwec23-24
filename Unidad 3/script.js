@@ -86,6 +86,43 @@ contador--;
     console.log(i);
 } */
 
+/*##########
+    FECHAS
+  ##########
+*/
+let parrafo = document.getElementById("fecha");
+parrafo.innerHTML = "hola";
+
+//New Date();
+//New Date(milisegundos);
+//New DAte(fechastring);
+//New Date(año, mes ,dia,horas,minutos,segundos,milisegundos)
+
+let fecha = new Date(92500000);
+parrafo.innerHTML = fecha;
+
+fecha = new Date("10/14/2023");
+parrafo.innerHTML = fecha;
+
+fecha = new Date("AUG 31 2023");
+parrafo.innerHTML = fecha;
+
+
+fecha = new Date("10-14-2023");
+parrafo.innerHTML = fecha;
+
+fecha = new Date(70,0,1,1,0,0);
+parrafo.innerHTML = fecha.getTime();
+fecha.getDate();
+fecha.getDay();
+fecha.getFullYear();
+fecha.getHours();
+fecha.getMilliseconds();
+fecha.getMinutes();
+fecha.getMonth();
+fecha.getSeconds();
+fecha.getTime();
+
 //Ejercicio Notas Modulo DWEC
 let nomEstudiant = "Joel";
 let notaExamen1 = 1;

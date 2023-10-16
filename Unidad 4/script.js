@@ -1,7 +1,7 @@
 /*
-##############
-    ARRAYS
-##############
+##########################
+    ARRAYS Y FUNCIONES
+##########################
 */
 //tipos
 /* let vacio = [];
@@ -169,6 +169,7 @@ console.log(e);
 //indexof() devuelve el primer indice en el que se encuentra un elemento dado (devuelve -1 si no se ha encontrado).
 
 //join() une todos los elementos de una array en una cadena utilizando un separador especificado.
+
 //sort() ordena elementos de una array  alfabeticamente si son cadenas i numericamentes si son numeros.
 //parametros de sort().
 //funcion que recibe dos valores a comparar.
@@ -204,3 +205,118 @@ let paco = ["Joan", "Amparo", "Topo"];
 console.log(paco.sort((a,b)=>{
     return b.localeCompare(a);
 }));
+
+//FUNCIONES
+
+    
+/* function diHola(){
+    console.clear();
+    console.log("Hola");
+
+}
+diHola();
+
+function multiplica(c,d){
+
+    let a = 2;
+    let b = 2;
+
+    return (a*b*c*d);
+    //console.log(a*b*c*d);
+}
+console.log(multiplica(2,2));
+ */
+
+
+
+//OBJETOS OH GOD IS COMING
+/* let unCliente = {
+
+    nombre: "Peter",
+    apellido: "Griffin",
+    "direccion fiscal": "Avenida Dominguez 3 4",
+    "`-´": "-_-",
+    pago: {
+        tipo : "Visa",
+        tarjeta : 122459085,
+        "fecha de caducidad" : "12/2000"
+    },
+    vencimiento: 30
+    
+}
+unCliente["apellido"] = "Jackson";
+unCliente.nombre = "Adam";
+console.log(unCliente.pago.tarjeta);
+console.log(unCliente);
+ */
+
+let estudianteModerno = {
+    id: 2,
+    nombre: "Pepo",
+    diHola : function(){
+        return "Hola";
+    },
+    notas : [10,1,2,7],
+    media : function(notas){
+        let suma = 0;
+        for(let i = 0; i < notas.length; i++) {
+            suma += notas[i];
+            
+        };
+        return (suma/notas.length);
+    }
+}
+
+console.clear();
+console.log("El alumno: " + estudianteModerno.nombre + 
+" ha sacado una mediana de nota de: " +
+estudianteModerno.media(estudianteModerno.notas));
+
+/* estudianteModerno.apellido = "Tonto";
+
+estudianteModerno.diAdios = function(){
+    return "Adios";
+}
+
+console.log(estudianteModerno.diAdios());
+
+
+ */
+
+//This
+
+let factura = {
+    description: "Test Receipt",
+    precio: 100.0,
+    iva: 21.0,
+    subtotal: function(){
+        return this.precio;
+    },
+    total: function(){
+        return this.precio+(this.precio*this.iva)/100
+    }
+}
+console.log(factura.total());
+
+//CONSTRUCTORES
+
+function Web(){
+
+    this.url = "http://localhost";
+    this.nombre = "localhost";
+    
+    this.showInformation = function(){
+        return "url: "+ this.url + "\n"+ "Web: " + this.nombre;
+    }
+}
+Web.prototype.visitas = 2;
+Web.prototype.funcion = function(){
+    return "hola";
+};
+let unaWeb = new Web();
+unaWeb.url = "https;//fcbarcelona.cat";
+unaWeb.nombre = "Mes que un club";
+
+let segundaWeb = new Web();
+
+console.log(unaWeb);

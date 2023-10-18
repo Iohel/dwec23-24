@@ -320,3 +320,179 @@ unaWeb.nombre = "Mes que un club";
 let segundaWeb = new Web();
 
 console.log(unaWeb);
+
+/* let ciudades = [
+    {
+        municipio:"Zaragoza",
+        provincia:"Zaragoza"
+    },
+    {
+        municipio:"Avila",
+        provincia:"Avila"
+    },
+    {
+        municipio:"Madrid",
+        provincia:"Madrid"
+    },
+    {
+        municipio:"Barcelona",
+        provincia:"Barcelona"
+    },
+
+];
+console.log(ciudades);
+ciudades.sort((a,b) => {
+    return a.provincia.localeCompare(b.provincia);
+});
+console.log(ciudades); */
+
+const miArray = ["A","B","C"];
+miArray.push("D")
+miArray[0] = "B";
+console.log(miArray);
+
+
+//Desestructuracion
+const Numeros = [1,2,3];
+const [a,b,c] = Numeros;
+console.log(b+c);
+
+
+/* const persona = {
+    nombre: "Andreu",
+    edad: 33
+}
+
+const {nombre,edad} = persona; */
+/* console.log(nombre,edad); */
+/* const nombre = "Josep";
+const edad = 30;
+
+const persona = {
+    nombre,
+    edad
+} */
+
+//Template string
+/* 
+const nombre = "Bob";
+const edad = 15;
+
+const mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años`;
+console.log(mensaje); */
+
+//Operador Spread
+/* 
+const numeros = [1,2,3];
+const nuevosNumeros = [...numeros,4, 5]
+console.log(nuevosNumeros);
+ */
+//parametros por defecto
+
+/* function saludar(nombre = "invitado") {
+    console.log(`Hola ${nombre}.`);
+}
+
+saludar()
+//Parametros rest
+function sumar(...numeros){
+    let resultado = 0;
+    for(let numero of numeros){
+        resultado += numero
+    }    
+    return resultado;
+}
+
+console.log(sumar(1,2,5,6,)); */
+
+//Funciones flecha
+
+/* function sumar(a,b){
+    return a + b;
+} */
+
+/* const sumar = (...numeros) => {
+    let resultado = 0;
+    for(let numero of numeros){
+        resultado += numero
+    }    
+    return resultado;
+} */
+//Metodos
+//forEach() ejecuta una funcion proporcionada por nosotros una vez por cada elemento del array
+
+const multiplica = (n) =>{
+    return n*2
+}
+
+const numeros = [1,2,3,-1];
+numeros.forEach((numero) => {
+    console.log(multiplica(numero));
+});
+
+
+//map() crea un nuevo array con los resultados de aplicar una funcion a cada elemento del array.
+
+const dobleNumero = numeros.map((numero) => {
+    return numero*2;
+})
+
+console.log(dobleNumero);
+
+//filter() crea un nuevo array con todos los elementos que cumplan una condicion determinada.
+
+const numerosPares = numeros.filter((numero) => {
+
+    return numero % 2 == 0;
+
+});
+console.log(numerosPares);
+
+const numerosSuperiores = numeros.filter((numero) => {
+
+    return numero >= 2;
+
+});
+console.log(numerosPares);
+
+//reduce() aplica una funcion a un acumulador y a cada elemento del array para reducirlo a un unico valor.
+
+const suma = numeros.reduce((acumulador,numero) => {
+
+    return acumulador + numero;
+
+},0);
+console.log(suma);
+
+//find() devuelve el primer elemento del array que cumpla una determinada condicion
+const numeroEncontrado = numeros.find((numero) =>{
+    return numero < 3;
+});
+console.log(numeroEncontrado);
+
+//findindex() devuelve el indice del primer elemento del array que cumpla con una funcion de prueva o retornara -1 si no encuentra.
+
+const indiceEncontrado = numeros.findIndex((numero)=>{
+
+    return numero < 3;
+
+});
+console.log(indiceEncontrado);
+
+//some() comprueba si al menos un elemento del array cumple una condicion determinada
+
+const tieneNumeroPar = numeros.some((numero)=>{
+
+    return numero % 2 == 0;
+
+});
+console.log(tieneNumeroPar);
+
+// every(): comprueba si todos los numeros cumplen una condicion.
+
+const todosSonPositivos = numeros.every((numero)=>{
+
+    return numero > 0;
+
+});
+console.log(todosSonPositivos);

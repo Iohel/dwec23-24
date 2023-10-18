@@ -42,7 +42,7 @@ for (let i = 0; i < array.length; i++) {
             array[i].push("Neptune");
             array[i].push(30.1);
             array[i].push(3.88);
-            array[i].push(23/9/1846);
+            array[i].push("23/9/1846");
             break;
             
         case 4:

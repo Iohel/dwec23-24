@@ -1,18 +1,8 @@
-/*
-Array de Array
-Array[Planeta[]x5]
-Objeto planeta
-    Nombre
-    Distancia
-    Tamaño Relativo
-    Fecha de descubrimiento
-    date show today
-    showData function
-    sort
-
-*/
-
+//Ejericio Planetas
+//Se crea una array para mantener 5 planetas.
 let array = new Array(5);
+
+//For loop to insert the hard coded planed data making use of switch cases to get the new data.
 for (let i = 0; i < array.length; i++) {
     array[i] = new Array();
     switch (i) {
@@ -56,8 +46,8 @@ for (let i = 0; i < array.length; i++) {
             break;
     };
 }
-console.log(array);
 
+//Constructor where to hold the planets data.
 function Planeta(){
 
     this.name = "name"; 
@@ -73,7 +63,10 @@ function Planeta(){
     }
 }
 
+//array to be later used for both showing the infomation and sorting
 let planetas = [];
+
+//the following for each iterates the array "array" where each iteration create a new planet object.
 array.forEach(info => {
     
     let planeta = new Planeta;
@@ -86,10 +79,12 @@ array.forEach(info => {
     planetas.push(planeta)
 });
 
+//a for loop to show the info.
 for (let i = 0; i < planetas.length; i++) {
     planetas[i].printInformation();
 }
 
+//print function into sort algorithim
 console.log(planetas.sort((a,b)=>{
     return a.sunDistance - b.sunDistance;
 })); 

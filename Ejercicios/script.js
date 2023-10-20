@@ -56,5 +56,40 @@ for (let i = 0; i < array.length; i++) {
             break;
     };
 }
-
 console.log(array);
+
+function Planeta(){
+
+    this.name = "name"; 
+    this.sunDistance = 0;
+    this.sizeRelativeToEarth = 0;
+    this.dateOfDiscovery = "";
+
+    this.printInformation = function(){
+        console.log("Name: "+ this.name + "\n"+
+        "Distance to sun: "+ this.sunDistance + "\n"+ 
+        "Size by amounts of earth: "+ this.sizeRelativeToEarth + "\n"+ 
+        "Discovered in: "+ this.dateOfDiscovery + "\n");
+    }
+}
+
+let planetas = [];
+array.forEach(info => {
+    
+    let planeta = new Planeta;
+
+    planeta.name = info[0];
+    planeta.sunDistance = info[1];
+    planeta.sizeRelativeToEarth = info[2];
+    planeta.dateOfDiscovery = info[3];
+
+    planetas.push(planeta)
+});
+
+for (let i = 0; i < planetas.length; i++) {
+    planetas[i].printInformation();
+}
+
+console.log(planetas.sort((a,b)=>{
+    return a.sunDistance - b.sunDistance;
+})); 

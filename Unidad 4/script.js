@@ -193,7 +193,7 @@ console.log(numeros.sort((a,b)=>{
 
 //Sort string
 
-let paco = ["Joan", "Amparo", "Topo"];
+/* let paco = ["Joan", "Amparo", "Topo"]; */
 
 /* console.log(paco.sort((a,b)=>{
 
@@ -202,9 +202,9 @@ let paco = ["Joan", "Amparo", "Topo"];
 
 })); */
 
-console.log(paco.sort((a,b)=>{
+/* console.log(paco.sort((a,b)=>{
     return b.localeCompare(a);
-}));
+})); */
 
 //FUNCIONES
 
@@ -250,7 +250,7 @@ console.log(unCliente.pago.tarjeta);
 console.log(unCliente);
  */
 
-let estudianteModerno = {
+/* let estudianteModerno = {
     id: 2,
     nombre: "Pepo",
     diHola : function(){
@@ -270,7 +270,7 @@ let estudianteModerno = {
 console.clear();
 console.log("El alumno: " + estudianteModerno.nombre + 
 " ha sacado una mediana de nota de: " +
-estudianteModerno.media(estudianteModerno.notas));
+estudianteModerno.media(estudianteModerno.notas)); */
 
 /* estudianteModerno.apellido = "Tonto";
 
@@ -285,7 +285,7 @@ console.log(estudianteModerno.diAdios());
 
 //This
 
-let factura = {
+/* let factura = {
     description: "Test Receipt",
     precio: 100.0,
     iva: 21.0,
@@ -296,11 +296,11 @@ let factura = {
         return this.precio+(this.precio*this.iva)/100
     }
 }
-console.log(factura.total());
+console.log(factura.total()); */
 
 //CONSTRUCTORES
 
-function Web(){
+/* function Web(){
 
     this.url = "http://localhost";
     this.nombre = "localhost";
@@ -319,7 +319,7 @@ unaWeb.nombre = "Mes que un club";
 
 let segundaWeb = new Web();
 
-console.log(unaWeb);
+console.log(unaWeb); */
 
 /* let ciudades = [
     {
@@ -346,7 +346,7 @@ ciudades.sort((a,b) => {
 });
 console.log(ciudades); */
 
-const miArray = ["A","B","C"];
+/* const miArray = ["A","B","C"];
 miArray.push("D")
 miArray[0] = "B";
 console.log(miArray);
@@ -355,7 +355,7 @@ console.log(miArray);
 //Desestructuracion
 const Numeros = [1,2,3];
 const [a,b,c] = Numeros;
-console.log(b+c);
+console.log(b+c); */
 
 
 /* const persona = {
@@ -421,7 +421,7 @@ console.log(sumar(1,2,5,6,)); */
 //Metodos
 //forEach() ejecuta una funcion proporcionada por nosotros una vez por cada elemento del array
 
-const multiplica = (n) =>{
+/* const multiplica = (n) =>{
     return n*2
 }
 
@@ -495,4 +495,106 @@ const todosSonPositivos = numeros.every((numero)=>{
     return numero > 0;
 
 });
-console.log(todosSonPositivos);
+console.log(todosSonPositivos); */
+
+//Class
+class Persona{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+
+    saludar(){
+        console.log(`Hola soy ${this.nombre}.`);
+    }
+
+}
+
+const joel = new Persona("Joel");
+joel.saludar();
+
+//Herencia
+class Empleado extends Persona{
+    constructor(nombre,salario){
+        super(nombre)
+        this.salario = salario;
+    }
+
+    trabajar(){
+        console.log(`${this.nombre} esta trabajnado con el siguiente salario: ${this.salario}`);
+    }
+}
+
+const maria = new Empleado("Maria",300000);
+
+maria.trabajar();
+
+maria.saludar();
+
+//simbolos
+/*
+Los simbolos son una nueva clase de datos, introducidos por ES6
+Son valores unicos e inmutables.
+Se pueden utilizar como identificadores de propiedades de objeto
+*/
+
+const id = Symbol("Id");
+
+const persona = {
+    nombre : "Joel",
+    [id]: 1
+}
+
+console.log(persona[id]);
+
+//Iteradores
+/*
+Son objetos que implementan el protocolo de iteracion en JavaScript
+Permiten reccorer y acceder a los elementos de una seleccion 1 a 1
+*/
+const numeros = [1,2,3];
+const iterador = numeros[Symbol.iterator]();
+
+
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+
+//SET 
+//Permite almacenar valores unicos de cualquier tipo
+//no permite duplicados y ofrece metodoes para agregar 
+//eliminar y verificar la existencia de elementos.
+
+const setNumeros = new Set();
+setNumeros.add(1);
+setNumeros.add(2);
+setNumeros.add(2);
+setNumeros.add(3);
+
+console.log(setNumeros.has(2));
+setNumeros.delete(2);
+console.log(setNumeros.has(2));
+console.log(setNumeros.size);
+console.log(setNumeros);
+
+const iteratorNumeros = setNumeros[Symbol.iterator]();
+console.log(iteratorNumeros.next());
+console.log(iteratorNumeros.next());
+console.log(iteratorNumeros.next());
+
+//MAP
+//Permite almacenar PARES clave-valor donde cada clave es unica.
+//Permite operaciones de busqueda ,insercion y eliminacion.
+
+const mapaNombres = new Map();
+mapaNombres.set("nombre","Ana")
+mapaNombres.set("edad",33);
+mapaNombres.set("profesion","desarollador");
+
+console.log(mapaNombres.get("nombre"));
+console.log(mapaNombres.has("edad"));
+console.log(mapaNombres.delete("edad"));
+console.log(mapaNombres.has("edad"));
+console.log(mapaNombres.size);
+console.log(mapaNombres);
+

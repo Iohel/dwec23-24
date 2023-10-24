@@ -575,7 +575,7 @@ console.log(setNumeros.has(2));
 setNumeros.delete(2);
 console.log(setNumeros.has(2));
 console.log(setNumeros.size);
-console.log(setNumeros);
+console.log(setNumeros.entries());
 
 const iteratorNumeros = setNumeros[Symbol.iterator]();
 console.log(iteratorNumeros.next());

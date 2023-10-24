@@ -123,6 +123,10 @@ fecha.getMonth();
 fecha.getSeconds();
 fecha.getTime();
 
+//24/10/2023
+
+
+
 //Ejercicio Notas Modulo DWEC
 let nomEstudiant = "Joel";
 let notaExamen1 = 1;
@@ -217,3 +221,4 @@ for(i=10;i<=20;i=i+5){
     
 
 }
+

@@ -193,7 +193,7 @@ console.log(numeros.sort((a,b)=>{
 
 //Sort string
 
-/* let paco = ["Joan", "Amparo", "Topo"]; */
+let paco = ["Joan", "Amparo", "Topo"];
 
 /* console.log(paco.sort((a,b)=>{
 
@@ -202,9 +202,9 @@ console.log(numeros.sort((a,b)=>{
 
 })); */
 
-/* console.log(paco.sort((a,b)=>{
+console.log(paco.sort((a,b)=>{
     return b.localeCompare(a);
-})); */
+}));
 
 //FUNCIONES
 

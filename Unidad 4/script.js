@@ -121,7 +121,7 @@ console.clear(); */
 #################
  */
 
-tabla = new Array(11);
+/* tabla = new Array(11);
 for (let i = 0; i < tabla.length; i++) {
     tabla[i] = new Array(11);//10 filas 10 columnas;
 }
@@ -147,7 +147,7 @@ for (let fila = 0; fila < tabla.length; fila++){
         }
     }
     
-}
+} */
 
 //Metodos array
 //push() visto
@@ -193,7 +193,7 @@ console.log(numeros.sort((a,b)=>{
 
 //Sort string
 
-let paco = ["Joan", "Amparo", "Topo"];
+/* let paco = ["Joan", "Amparo", "Topo"]; */
 
 /* console.log(paco.sort((a,b)=>{
 
@@ -202,9 +202,9 @@ let paco = ["Joan", "Amparo", "Topo"];
 
 })); */
 
-console.log(paco.sort((a,b)=>{
+/* console.log(paco.sort((a,b)=>{
     return b.localeCompare(a);
-}));
+})); */
 
 //FUNCIONES
 
@@ -498,7 +498,7 @@ const todosSonPositivos = numeros.every((numero)=>{
 console.log(todosSonPositivos); */
 
 //Class
-class Persona{
+/* class Persona{
     constructor(nombre){
         this.nombre = nombre;
     }
@@ -528,7 +528,7 @@ const maria = new Empleado("Maria",300000);
 
 maria.trabajar();
 
-maria.saludar();
+maria.saludar(); */
 
 //simbolos
 /*
@@ -537,35 +537,35 @@ Son valores unicos e inmutables.
 Se pueden utilizar como identificadores de propiedades de objeto
 */
 
-const id = Symbol("Id");
+/* const id = Symbol("Id");
 
 const persona = {
     nombre : "Joel",
     [id]: 1
 }
 
-console.log(persona[id]);
+console.log(persona[id]); */
 
 //Iteradores
 /*
 Son objetos que implementan el protocolo de iteracion en JavaScript
 Permiten reccorer y acceder a los elementos de una seleccion 1 a 1
 */
-const numeros = [1,2,3];
+/* const numeros = [1,2,3];
 const iterador = numeros[Symbol.iterator]();
 
 
 console.log(iterador.next());
 console.log(iterador.next());
 console.log(iterador.next());
-console.log(iterador.next());
+console.log(iterador.next()); */
 
 //SET 
 //Permite almacenar valores unicos de cualquier tipo
 //no permite duplicados y ofrece metodoes para agregar 
 //eliminar y verificar la existencia de elementos.
 
-const setNumeros = new Set();
+/* const setNumeros = new Set();
 setNumeros.add(1);
 setNumeros.add(2);
 setNumeros.add(2);
@@ -580,13 +580,13 @@ console.log(setNumeros.entries());
 const iteratorNumeros = setNumeros[Symbol.iterator]();
 console.log(iteratorNumeros.next());
 console.log(iteratorNumeros.next());
-console.log(iteratorNumeros.next());
+console.log(iteratorNumeros.next()); */
 
 //MAP
 //Permite almacenar PARES clave-valor donde cada clave es unica.
 //Permite operaciones de busqueda ,insercion y eliminacion.
 
-const mapaNombres = new Map();
+/* const mapaNombres = new Map();
 mapaNombres.set("nombre","Ana")
 mapaNombres.set("edad",33);
 mapaNombres.set("profesion","desarollador");
@@ -596,5 +596,66 @@ console.log(mapaNombres.has("edad"));
 console.log(mapaNombres.delete("edad"));
 console.log(mapaNombres.has("edad"));
 console.log(mapaNombres.size);
-console.log(mapaNombres);
+console.log(mapaNombres); */
 
+//Cookies
+/*
+    Los utilizamos para:
+    - Monitorizar la actividad de los usuarios.
+    - Mantener opciones de visualizacion o de aspecto para el usuario.
+    - Almacenar variables en el lado cliente.
+    - Identificacion o autenticacion.
+
+*/
+//Crear un monstruo de las galletas, y una galleta.
+//document.cookie = "usuario=Oreo";
+function createCookie(usuarioCookie){
+    console.log("Creating Cookie");
+    usuarioCookie += "expires=Mon, 6 - Nov 2023 12:15:00 GMT";
+    document.cookie = "usuario=" + encodeURIComponent(usuarioCookie);
+    
+}
+
+function readCookie(){
+    console.log("Reading cookies.");
+    console.log(decodeURIComponent(document.cookie));
+}
+
+
+/*
+    Local Storage
+
+    setItem(clave,valor) - guarda informacion
+    getItem(clave) - recupera informacion
+*/
+let usuarioObjeto = {
+
+    nombre: "Peter",
+    apellido: "Griffin",
+    
+}
+function guardaValores(){
+    localStorage.clear;
+    console.log("saving data");
+    let usuariosWeb = ["Francisco, Dani, Ivan, Alvaro, Valentin"];
+    localStorage.setItem("usuarios",JSON.stringify(usuarioObjeto));
+}
+function leerValores(){
+    console.log("reading data");
+    let valor = localStorage.getItem("usuarios");
+    console.log(valor == null ? "La clave no se ha encontrado." : JSON.parse(valor));
+}
+
+/*
+    Recursividad
+*/
+
+function factorial(numero){
+
+    if(numero == 0) return 1;
+    
+    return (numero * factorial(numero -1));
+}
+
+let numero = factorial(10);
+console.log(numero);

@@ -66,7 +66,7 @@ error.classList.add("paco");
 error.classList.remove("error")
 error.classList.replace("paco","test") */
 
-let paras = document.getElementsByTagName('p');
+/* let paras = document.getElementsByTagName('p');
 let hijo = paras[2];
 console.log(hijo);
 let padre = hijo.parentNode;
@@ -74,4 +74,27 @@ console.log(padre);
 let primerHermano = padre.firstElementChild;
 console.log(primerHermano);
 siguienteHermano = hijo.previousElementSibling;
-console.log(siguienteHermano);
+console.log(siguienteHermano); */
+
+//Eventos
+//dom reference
+const par = document.querySelector('p');
+//event creator
+par.addEventListener('click',(e)=>{
+    console.log(e.target.innerText);
+    e.target.innerText = "Texto cambiado";
+    console.log(e.target.innerText);
+})
+par.addEventListener('mouseover',()=>{
+    console.log("mouse");
+})
+function escribeLog(){
+    console.log("log");
+}
+function escribeMouse() {
+    console.log("mouse");
+}
+
+document.addEventListener("keydown",(e)=>{
+    console.log("Tecla presionada: " + e.key);
+});

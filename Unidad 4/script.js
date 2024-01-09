@@ -635,7 +635,7 @@ let usuarioObjeto = {
     
 }
 function guardaValores(){
-    localStorage.clear;
+    localStorage.clear();
     console.log("saving data");
     let usuariosWeb = ["Francisco, Dani, Ivan, Alvaro, Valentin"];
     localStorage.setItem("usuarios",JSON.stringify(usuarioObjeto));
